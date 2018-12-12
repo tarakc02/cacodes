@@ -1,0 +1,20 @@
+Package: cacodes
+Title: Look up laws from the California Legislative Information website
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Tarak",
+           family = "Shah",
+           role = c("aut", "cre"),
+           email = "tarak@hrdag.org")
+Description: Pulls text of laws from leginfo.legislature.ca.gov based on coding 
+    commonly found in court and arrest data
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1
+Imports: 
+    xml2,
+    rvest,
+    stringr
