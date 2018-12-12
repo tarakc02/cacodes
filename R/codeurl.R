@@ -18,6 +18,7 @@ sanitize <- function(codes) {
 #' 
 #' @param codes A vector of legal codes
 #' @importFrom dplyr %>%
+#' @export
 leg_info <- function(codes) {
     codes %>%
         sanitize %>%
