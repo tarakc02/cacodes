@@ -1,4 +1,5 @@
 ---
+title: cacodes
 output: github_document
 ---
 
@@ -12,11 +13,11 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# cacodes
+# What it is
 
 An R package to look up text from [CA Legislative Information](https://leginfo.legislature.ca.gov/)
 
-## how to use
+## How to use it
 
 ```{r, cache = TRUE}
 library(cacodes)

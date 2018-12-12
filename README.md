@@ -1,18 +1,16 @@
----
-output: github_document
----
+cacodes
+================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
-# cacodes
+What it is
+==========
 
 An R package to look up text from [CA Legislative Information](https://leginfo.legislature.ca.gov/)
 
-## how to use
+How to use it
+-------------
 
-
-```r
+``` r
 library(cacodes)
 codes <- c("PC 602", "VC 23153", "HS 11377(A)")    
 leg_info(codes)
@@ -41,8 +39,7 @@ leg_info(codes)
 
 Using with `data.frame`s:
 
-
-```r
+``` r
 library(dplyr)
 charges <- data_frame(id = 1:3, charge = codes)
 charges
@@ -63,7 +60,8 @@ charges %>%
 #> 3     3 HS 11377… <S3: xml_do… "Health and Safety Code - HSC\nDIVISION 10…
 ```
 
-## Installation
+Installation
+------------
 
 This package is still under development. The development version can be installed from GitHub using the [devtools pacakge](https://cran.r-project.org/package=devtools)
 
