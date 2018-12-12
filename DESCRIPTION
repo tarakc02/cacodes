@@ -17,4 +17,5 @@ RoxygenNote: 6.1.1
 Imports: 
     xml2,
     rvest,
-    stringr
+    stringr,
+    purrr
