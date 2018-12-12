@@ -10,8 +10,28 @@ An R package to look up text from [CA Legislative Information](https://leginfo.l
 How to use it
 -------------
 
+Load using `library`:
+
 ``` r
 library(cacodes)
+```
+
+Look up charge codes using `leg_info`:
+
+``` r
+leg_info("PC 22810(A)")
+#> 
+#>  PC 22810(A) ~~~~~~~~~~~~~
+#>      Penal Code - PEN PART 6. CONTROL OF DEADLY WEAPONS [16000 - 34370] TITLE 3.
+#>     WEAPONS AND DEVICES OTHER THAN FIREARMS [19910 - 23025] DIVISION 11. TEAR GAS
+#>     AND TEAR GAS WEAPONS [22810 - 23025] CHAPTER 1. General Provisions [22810 -
+#>     22840] 22810.   Notwithstanding any other provision of law, any person may
+#>     purchase, possess, or use ...
+```
+
+You can look up multiple codes:
+
+``` r
 codes <- c("PC 602", "VC 23153", "HS 11377(A)")    
 leg_info(codes)
 #> 
@@ -37,7 +57,7 @@ leg_info(codes)
 #>     and as otherwise provided i ...
 ```
 
-Using with `data.frame`s:
+Using with `data.frame`s. `as.character` can take one or more `leg_info` responses and extract just the legislative text (which can then be passed on, e.g. to look for keywords or to summarize):
 
 ``` r
 library(dplyr)

@@ -19,15 +19,28 @@ An R package to look up text from [CA Legislative Information](https://leginfo.l
 
 ## How to use it
 
-```{r, cache = TRUE}
+Load using `library`:
+
+```{r loadlibs}
 library(cacodes)
+```
+
+Look up charge codes using `leg_info`:
+
+```{r ex-sing-lookup}
+leg_info("PC 22810(A)")
+```
+
+You can look up multiple codes:
+
+```{r ex-multi, cache = TRUE}
 codes <- c("PC 602", "VC 23153", "HS 11377(A)")    
 leg_info(codes)
 ```
 
-Using with `data.frame`s:
+Using with `data.frame`s. `as.character` can take one or more `leg_info` responses and extract just the legislative text (which can then be passed on, e.g. to look for keywords or to summarize):
 
-```{r, message = FALSE, warning = FALSE, cache = TRUE}
+```{r ex-dataframe, message = FALSE, warning = FALSE, cache = TRUE}
 library(dplyr)
 charges <- data_frame(id = 1:3, charge = codes)
 charges
