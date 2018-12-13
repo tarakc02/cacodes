@@ -37,7 +37,7 @@ leg_info <- function(codes) {
 
 #' @export
 as.character.ca_leg_info <- function(x, ..., detail = FALSE) {
-    nodes <- if (detail) "p, h4, h5, h6" else "h4, h5, h6"
+    nodes <- if (detail) c("p, h4, h5, h6") else c("h4, h5, h6")
     purrr::map(x, ~rvest::html_nodes(., nodes) %>% rvest::html_text()) %>%
         purrr::map_chr(paste, collapse = "\n")
 }
